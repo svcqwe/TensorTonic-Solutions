@@ -8,5 +8,5 @@ def gelu(x):
     Return: np.ndarray of same shape (dtype=float)
     """
     x = np.asarray(x, dtype=float)
-    erf_ = np.vectorize(math.erf)
+    erf_ = np.vectorize(m.erf)
     return 0.5 * x * (1 + erf_(x / np.sqrt(2)))
